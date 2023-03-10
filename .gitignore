@@ -1,0 +1,39 @@
+# Ignorar directorios y archivos generados por el sistema
+target/
+build/
+.gradle/
+.vscode/
+.idea/
+build.gradle
+*.iml
+
+### Maven ###
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+
+# Ignorar archivos de configuración
+/application.properties
+
+# Ignorar la carpeta node_modules y los archivos generados por npm
+frontend/node_modules/
+frontend/dist/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### Adición de submódulo frontend ###
+frontend/ # se agrega el directorio frontend para indicar que es un submódulo

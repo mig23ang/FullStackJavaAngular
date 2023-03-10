@@ -1,0 +1,57 @@
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input
+        required
+        type="text"
+        class="form-control"
+        name="nombre"
+        [(ngModel)]="cliente.nombre"
+        placeholder="Ingresa tu nombre"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="apellido" class="form-label">Apellido</label>
+      <input
+        type="text"
+        class="form-control"
+        name="apellido"
+        [(ngModel)]="cliente.apellido"
+        placeholder="Ingresa tu apellido"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        required="true"
+        type="email"
+        class="form-control"
+        name="email"
+        [(ngModel)]="cliente.email"
+        placeholder="Ingresa tu correo electrónico"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="hidden"
+        class="form-control"
+        name="id"
+        [(ngModel)]="cliente.id"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="hidden"
+        class="form-control"
+        name="createAt"
+        [(ngModel)]="cliente.createAt"
+      />
+    </div>
+      <button type="submit" class="btn btn-primary" (click)="update()">
+        Actualizar
+      </button>
+
+  </form>
+</div>
+

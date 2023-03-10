@@ -1,0 +1,29 @@
+<div class="container">
+  <table class="table table-striped" *ngIf="clientes.length > 0">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Correo electrónico</th>
+        <th scope="col">Fecha de creación</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of clientes">
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.apellido }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.createAt }}</td>
+        <td>
+          <a [routerLink]="['/editar', item.id]" class="btn btn-sm btn-primary"
+            >Editar</a
+          >
+          <a (click)="delete(item)" class="btn btn-sm btn-danger">Eliminar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

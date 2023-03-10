@@ -1,0 +1,26 @@
+<button class="btn btn-info" (click)="setHabilitar()">
+  {{ habilitar == true ? "Ocultar" : "Mostrar" }}
+</button>
+<div class="container" *ngIf="habilitar == true">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo electrónico</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of listaCurso">
+      <tr>
+        <td>{{ item }}</td>
+        <td>John Doe</td>
+        <td>john.doe@example.com</td>
+        <td>
+          <a href="#" class="btn btn-sm btn-primary">Editar</a>
+          <a href="#" class="btn btn-sm btn-danger">Eliminar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
